@@ -4,6 +4,9 @@ Binary Converter is a browser extenstion that converts numbers and ASCII text to
 
 > Conversions based from https://www.rapidtables.com
 
+
+![Binary Converter](images/screens/med-1.png)
+
 ## Number Conversion
 
 Convert a number to and from the number systems:
@@ -25,4 +28,4 @@ Convert ASCII text to:
 
 ## User Interface
 
-![UI of the Base2 Translator chrome extension](images/screens/med-1.png)
+![UI of the browser extension](images/screens/snapshot.jpg)
