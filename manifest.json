@@ -1,0 +1,26 @@
+{
+  "name": "Binary Converter",
+  "version": "1.0",
+  "description": "Convert ASCII Text and Decimal, Binary, Hex, Octal Numbers",
+  "permissions": ["activeTab", "declarativeContent"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "page_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icons8-data-16.png",
+      "32": "images/icons8-data-32.png",
+      "48": "images/icons8-data-48.png",
+      "96": "images/icons8-data-96.png"
+    }
+  },
+  "icons": {
+    "16": "images/icons8-data-16.png",
+    "32": "images/icons8-data-32.png",
+    "48": "images/icons8-data-48.png",
+    "96": "images/icons8-data-96.png"
+  },
+  "manifest_version": 2
+}

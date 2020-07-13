@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0;
+      }
+      table.nc,
+      table.sc {
+        border-collapse: collapse;
+        border-spacing: 0;
+        empty-cells: show;
+      }
+      .nc thead,
+      .sc thead {
+        background-color: #e0e0e0;
+        color: #000;
+        text-align: left;
+        vertical-align: bottom;
+      }
+      .nc th,
+      .sc th {
+        padding: 0.5em 1em;
+      }
+      .nc td:nth-child(1),
+      .sc td:nth-child(1) {
+        padding: 0.6em 0.4em 0.3em 1em;
+      }
+      .nc td:nth-child(2) {
+        padding: 0.6em 0.1em 0.3em 0.1em;
+      }
+      .sc td:nth-child(2) {
+        padding: 0.6em 1em 0.3em 0.1em;
+      }
+      .nc td:nth-child(3) {
+        padding: 0.6em 1em 0.3em 0.2em;
+      }
+      .nc tr:last-child > td,
+      .sc tr:last-child > td {
+        width: 25px;
+        padding-bottom: 0.8em;
+      }
+      .nc input:not([type="reset"]) {
+        min-width: 220px;
+      }
+      .sc input:not([type="reset"]):not([type="checkbox"]) {
+        min-width: 235px;
+      }
+      .sc textarea {
+        width: 235px !important;
+        resize: vertical;
+      }
+      .mathsymbol {
+        font-style: italic;
+      }
+      label.chkbox {
+        position: relative;
+        top: -2px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <form name="calcform" autocomplete="off">
+      <table class="nc">
+        <thead>
+          <tr>
+            <th colspan="3">Number Conversion</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><label for="bin">Binary</label></td>
+            <td class="math">
+              <input
+                type="text"
+                inputmode="numeric"
+                id="bin"
+                name="bin"
+                placeholder="0 or 1 ..."
+                autofocus=""
+              />
+            </td>
+            <td class="mathsymbol"><sub>2</sub></td>
+          </tr>
+          <tr>
+            <td><label for="oct">Octal</label></td>
+            <td class="math">
+              <input
+                type="text"
+                inputmode="numeric"
+                id="oct"
+                name="oct"
+                placeholder="0 to 7 ..."
+              />
+            </td>
+            <td class="mathsymbol"><sub>8</sub></td>
+          </tr>
+          <tr>
+            <td><label for="dec">Decimal</label></td>
+            <td class="math">
+              <input
+                type="text"
+                inputmode="numeric"
+                id="dec"
+                name="dec"
+                placeholder="0 to 9 ..."
+              />
+            </td>
+            <td class="mathsymbol"><sub>10</sub></td>
+          </tr>
+          <tr>
+            <td><label for="hex">Hex</label></td>
+            <td class="math">
+              <input
+                type="text"
+                id="hex"
+                name="hex"
+                placeholder="0 to 9 and A to F ..."
+              />
+            </td>
+            <td class="mathsymbol"><sub>16</sub></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><input type="reset" value="Reset" /></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+    <form name="calcform2" autocomplete="off">
+      <table class="sc">
+        <thead>
+          <tr>
+            <th colspan="2">String Conversion</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td class="math">
+              <input type="checkbox" id="prefix" name="prefix" value="prefix" />
+              <label for="prefix" class="chkbox"> Prefix with 0x / 0b</label>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="txt">ASCII</label></td>
+            <td class="math">
+              <textarea id="txt" name="txt" placeholder="ABC ..."></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="hex2">Hex</label><br />(<i>bytes</i>)</td>
+            <td class="math">
+              <textarea
+                id="hex2"
+                name="hex2"
+                placeholder="41 42 43 ..."
+              ></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="dec2">Decimal</label><br />(<i>bytes</i>)</td>
+            <td>
+              <textarea
+                id="dec2"
+                name="dec2"
+                placeholder="65 66 67 ..."
+              ></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="bin2">Binary</label><br />(<i>bytes</i>)</td>
+            <td class="math">
+              <textarea
+                id="bin2"
+                name="bin2"
+                placeholder="01000001 01000010 01000011 ..."
+              ></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="len">Length</label><br />(<i>bytes</i>)</td>
+            <td class="math">
+              <input type="text" id="len" name="len" disabled />
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><input type="reset" value="Reset" /></td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+    <script src="conversion.js"></script>
+  </body>
+</html>
